@@ -16,6 +16,8 @@
 		524EA8782DB0D09F00DA980F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524EA8762DB0D09F00DA980F /* LaunchScreen.storyboard */; };
 		524EA8822DB0DDC500DA980F /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EA8812DB0DDC500DA980F /* JobModel.swift */; };
 		524EA8852DB0E45300DA980F /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EA8832DB0E45300DA980F /* CardCell.swift */; };
+		5285AF9D2DB21705006BCC1D /* JobCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285AF9B2DB21705006BCC1D /* JobCardCell.swift */; };
+		5285AF9E2DB21705006BCC1D /* JobCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5285AF9C2DB21705006BCC1D /* JobCardCell.xib */; };
 		52AE55112DB0E4AE00B68B1B /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AE55102DB0E4AE00B68B1B /* CardCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		524EA8792DB0D09F00DA980F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524EA8812DB0DDC500DA980F /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		524EA8832DB0E45300DA980F /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		5285AF9B2DB21705006BCC1D /* JobCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardCell.swift; sourceTree = "<group>"; };
+		5285AF9C2DB21705006BCC1D /* JobCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCardCell.xib; sourceTree = "<group>"; };
 		52AE55102DB0E4AE00B68B1B /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,10 +85,20 @@
 		524EA8872DB0E46000DA980F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5285AF9A2DB216B8006BCC1D /* OfferCardCell */,
 				524EA8832DB0E45300DA980F /* CardCell.swift */,
 				52AE55102DB0E4AE00B68B1B /* CardCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5285AF9A2DB216B8006BCC1D /* OfferCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				5285AF9B2DB21705006BCC1D /* JobCardCell.swift */,
+				5285AF9C2DB21705006BCC1D /* JobCardCell.xib */,
+			);
+			path = OfferCardCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,7 @@
 				524EA8752DB0D09F00DA980F /* Assets.xcassets in Resources */,
 				524EA8732DB0D09D00DA980F /* Main.storyboard in Resources */,
 				52AE55112DB0E4AE00B68B1B /* CardCell.xib in Resources */,
+				5285AF9E2DB21705006BCC1D /* JobCardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +176,7 @@
 			files = (
 				524EA8702DB0D09D00DA980F /* ViewController.swift in Sources */,
 				524EA8822DB0DDC500DA980F /* JobModel.swift in Sources */,
+				5285AF9D2DB21705006BCC1D /* JobCardCell.swift in Sources */,
 				5217FD552DB119B20012A6AC /* CardStackLayout.swift in Sources */,
 				524EA86C2DB0D09D00DA980F /* AppDelegate.swift in Sources */,
 				524EA86E2DB0D09D00DA980F /* SceneDelegate.swift in Sources */,

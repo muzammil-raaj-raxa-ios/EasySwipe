@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="odF-n3-JrJ">
-                                <rect key="frame" x="0.0" y="101" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="124" width="393" height="604"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="650" id="M6P-Fk-j9r"/>
+                                    <constraint firstAttribute="height" constant="604" id="M6P-Fk-j9r"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Whi-en-hCR">
                                     <size key="itemSize" width="128" height="128"/>

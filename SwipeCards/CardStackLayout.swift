@@ -8,7 +8,7 @@
 import UIKit
 
 class CardStackLayout: UICollectionViewLayout {
-    private let itemSize = CGSize(width: 350, height: 620)
+    private let itemSize = CGSize(width: 342, height: 604)
     private let visibleCount = 3
     private let spacing: CGFloat = 10
     private var itemAttributes: [UICollectionViewLayoutAttributes] = []

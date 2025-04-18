@@ -13,15 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardsCV: UICollectionView!
     
     private var jobs: [JobModel] = [
-        JobModel(title: "Software Development Engineer, Photoshop iOS"),
-        JobModel(title: " Engineer, Photoshop iOS"),
-        JobModel(title: " iOS"),
-        JobModel(title: "Software Development Engineer, Photoshop iOS"),
-        JobModel(title: " Engineer, Photoshop iOS"),
-        JobModel(title: " iOS"),
-        JobModel(title: "Software Development Engineer, Photoshop iOS"),
-        JobModel(title: " Engineer, Photoshop iOS"),
-        JobModel(title: " iOS"),
+        JobModel(title: "Lead UI/UX Designer Visual Design Lead and Interaction Planner"),
+        JobModel(title: "iOS Developer Swift Expert with CoreData & Combine Experience"),
+        JobModel(title: "Android Engineer Kotlin Pro with Jetpack Compose Mastery"),
+        JobModel(title: "Senior Backend Developer Node.js and MongoDB Specialist"),
+        JobModel(title: "Product Manager Agile Expert and Roadmap Strategist"),
+        JobModel(title: "Graphic Designer Branding, Illustration, and Digital Art"),
+        JobModel(title: "Full Stack Developer React & Express Enthusiast"),
+        JobModel(title: "QA Engineer Automation Tester with Selenium & Appium"),
+        JobModel(title: "DevOps Engineer CI/CD Pipeline Architect with Docker/Kubernetes"),
+        JobModel(title: "Data Scientist Python & TensorFlow Expert with ML Skills"),
+        JobModel(title: "Frontend Developer Vue.js Specialist with UI Animation Skills")
     ]
     
     override func viewDidLoad() {
@@ -31,7 +33,7 @@ class ViewController: UIViewController {
         
         cardsCV.delegate = self
         cardsCV.dataSource = self
-        cardsCV.register(UINib(nibName: "CardCell", bundle: nil), forCellWithReuseIdentifier: "CardCell")
+        cardsCV.register(UINib(nibName: "JobCardCell", bundle: nil), forCellWithReuseIdentifier: "JobCardCell")
         cardsCV.collectionViewLayout = CardStackLayout()
         cardsCV.isScrollEnabled = false
     }
@@ -46,7 +48,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as? CardCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JobCardCell", for: indexPath) as? JobCardCell else {
             return UICollectionViewCell()
         }
         
@@ -56,12 +58,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         cell.onSwiped = { [weak self, weak cell] isRight in
             guard let self = self, let cell = cell,
-                  let actualIndexPath = collectionView.indexPath(for: cell),
-                  actualIndexPath.item < self.jobs.count else { return }
+                  let currentIndexPath = collectionView.indexPath(for: cell),
+                  currentIndexPath.item < self.jobs.count else { return }
             
-            self.jobs.remove(at: actualIndexPath.item)
+            self.jobs.remove(at: currentIndexPath.item)
             collectionView.performBatchUpdates({
-                collectionView.deleteItems(at: [actualIndexPath])
+                collectionView.deleteItems(at: [currentIndexPath])
             }, completion: { _ in
                 collectionView.collectionViewLayout.invalidateLayout()
             })
@@ -71,6 +73,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 350, height: 620)
+        return CGSize(width: 342, height: 604)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
